@@ -17,6 +17,4 @@ class BoxesScreen(BaseFrame):
         self.success = Label(f_main, text="Success")
         self.success.grid(row=0, column=0)
         
-    def test(self):
-        print("FUCK YA")
         

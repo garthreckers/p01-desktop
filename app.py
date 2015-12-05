@@ -27,13 +27,10 @@ class Application(Frame): # pylint: disable=too-many-ancestors
 
         self.show_frame(LoginScreen)
 
-        print(self.frames)
-
     def show_frame(self, cls):
         """ Use this function from one of the screens to change the current screens """
 
         self.frames[cls].tkraise()
-        self.frames[cls].test()
 
 
 APP = Application()

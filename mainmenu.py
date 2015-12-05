@@ -22,4 +22,3 @@ class MainMenu(Menu): # pylint: disable=too-many-ancestors
 
         master['menu'] = self
 
-        print(master.tk.call('tk', 'windowingsystem'))
