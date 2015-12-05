@@ -3,12 +3,11 @@
 Desktop interface for Project01
 """
 
-from tkinter import Frame, Tk
+from tkinter import Frame
 
 from loginscreen import LoginScreen
 from boxesscreen import BoxesScreen
 from mainmenu import MainMenu
-from api import APICall
 
 class Application(Frame): # pylint: disable=too-many-ancestors
     """ Main App class """
@@ -21,16 +20,18 @@ class Application(Frame): # pylint: disable=too-many-ancestors
         self.master.title("Project01")
 
         self.frames = {}
-        for F in (LoginScreen, BoxesScreen):
-            frame = F(self.master, self)
+        for frm in (LoginScreen, BoxesScreen):
+            frame = frm(self.master, self)
             frame.grid(row=0, column=0)
-            self.frames[F] = frame
+            self.frames[frm] = frame
 
         self.show_frame(LoginScreen)
 
         print(self.frames)
 
     def show_frame(self, cls):
+        """ Use this function from one of the screens to change the current screens """
+
         self.frames[cls].tkraise()
         self.frames[cls].test()
 

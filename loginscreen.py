@@ -5,9 +5,11 @@ Opening login screen
 from tkinter import Label, Entry, Frame, Button, StringVar, Tk
 from boxesscreen import BoxesScreen
 from baseframe import BaseFrame
+#from api import APICall
 
 class LoginScreen(BaseFrame):
     def create_widgets(self):
+        """ Login form """
 
         frame_top = Frame(self, pady=15, padx=15)
         frame_top.pack()
@@ -39,7 +41,3 @@ class LoginScreen(BaseFrame):
         """ Run this when login button is pressed """
         print(type(self.controller))
         self.controller.show_frame(BoxesScreen)
-
-    def test(self):
-        print("HELL YA")
-        

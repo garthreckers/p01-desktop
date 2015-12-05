@@ -5,9 +5,11 @@ users boxes they have associated with their account
 
 from tkinter import Frame, Label, Button
 from baseframe import BaseFrame
+#from api import APICall
 
 class BoxesScreen(BaseFrame):
     def create_widgets(self):
+        """ Display all the boxes """
 
         f_main = Frame(self, padx=15, pady=15)
         f_main.pack()
